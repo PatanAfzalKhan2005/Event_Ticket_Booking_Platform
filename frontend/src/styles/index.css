@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-bg text-text antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(156, 106, 222, 0.18), transparent 24%),
+      radial-gradient(circle at 85% 15%, rgba(95, 37, 159, 0.12), transparent 18%),
+      linear-gradient(180deg, #fbfaff 0%, #f6f4ff 100%);
+    min-height: 100vh;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  .card-surface {
+    @apply rounded-[32px] border border-primary/10 bg-white shadow-soft;
+  }
+
+  .hero-panel {
+    @apply rounded-[40px] bg-gradient-to-br from-primary via-primary-dark to-[#2E0A57] p-8 shadow-purple sm:p-12;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-70;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-primary/20 hover:text-primary-dark;
+  }
+
+  .btn-light {
+    @apply inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-primary-dark transition hover:-translate-y-0.5 hover:bg-white/90;
+  }
+
+  .btn-ghost-light {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20;
+  }
+
+  .input-field {
+    @apply mt-2 w-full rounded-2xl border border-primary/10 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10;
+  }
+
+  .field-label {
+    @apply block text-sm font-semibold text-slate-700;
+  }
+
+  .badge-pill {
+    @apply inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary-dark ring-1 ring-primary/10;
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.24em] text-primary-dark;
+  }
+
+  .section-title {
+    @apply mt-2 text-3xl font-black tracking-tight text-slate-900;
+  }
+
+  .section-heading {
+    @apply mb-6 flex items-center justify-between gap-4;
+  }
+
+  .nav-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-primary/10 hover:text-primary-dark;
+  }
+
+  .nav-pill-active {
+    @apply bg-primary/10 text-primary-dark;
+  }
+
+  .stat-card {
+    @apply rounded-[28px] border border-primary/10 bg-slate-50 p-5;
+  }
+
+  .empty-state {
+    @apply rounded-[28px] border border-dashed border-primary/10 bg-slate-50 p-8 text-center text-sm font-medium text-slate-500;
+  }
+}
